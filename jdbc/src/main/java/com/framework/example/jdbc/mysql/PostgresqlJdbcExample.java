@@ -14,12 +14,13 @@ import java.sql.SQLException;
  */
 public class PostgresqlJdbcExample {
 
-    static final String sql1 = "select * from quota_20231230";
-    static final String sql2 = "select * from helloworld";
-//    static final String RESULT_SET_1_1 = "merc_id";
-//    static final String RESULT_SET_1_2 = "month_total";
-    static final String RESULT_SET_1_1 = "name";
-    static final String RESULT_SET_1_2 = "age";
+    static final String sql = "select * from quota_20231230";
+//    static final String sql = "select * from helloworld";
+
+    static final String RESULT_SET_1_1 = "merc_id";
+    static final String RESULT_SET_1_2 = "month_total";
+//    static final String RESULT_SET_1_1 = "name";
+//    static final String RESULT_SET_1_2 = "age";
 
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         System.out.println("Hello, PostgresqlJdbcExample!");
@@ -32,7 +33,7 @@ public class PostgresqlJdbcExample {
         Connection connection = DriverManager.getConnection(url, user, password);
 
         // 获取执行器
-        PreparedStatement preparedStatement = connection.prepareStatement(sql2);
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
         // 执行查询并获取结果
         ResultSet resultSet = preparedStatement.executeQuery();
         while (resultSet.next()) {
