@@ -1,4 +1,4 @@
-package com.framework.example.jdbc.mysql;
+package com.framework.example.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
