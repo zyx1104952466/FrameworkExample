@@ -12,6 +12,9 @@
         <module>jdbc</module>
         <module>DataPool</module>
         <module>springjdbc</module>
+        <module>springtx</module>
+        <module>hibernate</module>
+        <module>mybatis</module>
     </modules>
 
     <properties>

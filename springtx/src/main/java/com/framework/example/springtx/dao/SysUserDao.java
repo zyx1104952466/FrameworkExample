@@ -1,6 +1,6 @@
-package com.framework.example.springjdbc.dao;
+package com.framework.example.springtx.dao;
 
-import com.framework.example.springjdbc.model.SysUser;
+import com.framework.example.springtx.model.SysUser;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

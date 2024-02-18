@@ -1,7 +1,7 @@
-package com.framework.example.springjdbc.service;
+package com.framework.example.springtx.service;
 
-import com.framework.example.springjdbc.dao.SysUserDao;
-import com.framework.example.springjdbc.model.SysUser;
+import com.framework.example.springtx.dao.SysUserDao;
+import com.framework.example.springtx.model.SysUser;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;

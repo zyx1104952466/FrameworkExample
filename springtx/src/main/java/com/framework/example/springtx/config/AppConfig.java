@@ -1,10 +1,12 @@
-package com.framework.example.springjdbc.config;
+package com.framework.example.springtx.config;
 
-import com.framework.example.springjdbc.dao.SysUserDao;
+import com.framework.example.springtx.dao.SysUserDao;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
@@ -27,6 +29,11 @@ public class AppConfig {
         dataSource.setUsername("root");
         dataSource.setPassword("root");
         return dataSource;
+    }
+
+    @Bean
+    public PlatformTransactionManager transactionManager(DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean
